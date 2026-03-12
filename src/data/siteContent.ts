@@ -1,0 +1,176 @@
+import { Brush, Code2, Rocket, ShieldCheck, Gauge, PenSquare } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+export type ServiceItem = {
+  title: string;
+  description: string;
+  eyebrow: string;
+  icon: LucideIcon;
+};
+
+export type ProcessStep = {
+  index: string;
+  title: string;
+  description: string;
+};
+
+export type ProjectItem = {
+  name: string;
+  category: string;
+  goal: string;
+  tags: string[];
+  accent: string;
+};
+
+export const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Quote", href: "/quote" }
+];
+
+export const heroMetrics = [
+  { value: "Custom", label: "Designed around your brand" },
+  { value: "Motion-led", label: "Modern frontend presentation" },
+  { value: "Ongoing", label: "Upkeep built into the model" }
+];
+
+export const serviceHighlights: ServiceItem[] = [
+  {
+    eyebrow: "01 / Design",
+    title: "Custom Website Design",
+    description: "Premium visual systems, sharp messaging, and layouts that make the brand feel established from the first scroll.",
+    icon: Brush
+  },
+  {
+    eyebrow: "02 / Build",
+    title: "Frontend Development",
+    description: "Responsive React-based builds with clean structure, thoughtful motion, and a polished feel across every breakpoint.",
+    icon: Code2
+  },
+  {
+    eyebrow: "03 / Launch",
+    title: "Launch & Setup",
+    description: "Structured handoff, deployment support, and production-ready setup so the site feels considered before it goes live.",
+    icon: Rocket
+  },
+  {
+    eyebrow: "04 / Upkeep",
+    title: "Ongoing Website Support",
+    description: "Monthly upkeep for edits, updates, performance checks, and continuous refinement after launch.",
+    icon: ShieldCheck
+  }
+];
+
+export const extendedServices: ServiceItem[] = [
+  {
+    eyebrow: "Service / 01",
+    title: "Responsive Design Systems",
+    description: "Interfaces shaped for desktop, tablet, and mobile with strong hierarchy and clean reading flow.",
+    icon: PenSquare
+  },
+  {
+    eyebrow: "Service / 02",
+    title: "Landing Pages & Business Sites",
+    description: "Focused pages and full marketing sites designed to present the offer clearly and move visitors to action.",
+    icon: Brush
+  },
+  {
+    eyebrow: "Service / 03",
+    title: "Redesign & Modernization",
+    description: "Sharper structure, cleaner visual identity, and a more current frontend experience when an existing site feels behind.",
+    icon: Code2
+  },
+  {
+    eyebrow: "Service / 04",
+    title: "Performance-Minded Builds",
+    description: "Animation and visual polish handled with restraint so the site feels alive without becoming heavy.",
+    icon: Gauge
+  },
+  {
+    eyebrow: "Service / 05",
+    title: "Updates & Content Support",
+    description: "Post-launch edits, seasonal updates, service changes, and routine refinements handled through a simple ongoing model.",
+    icon: ShieldCheck
+  }
+];
+
+export const processSteps: ProcessStep[] = [
+  {
+    index: "01",
+    title: "Discover",
+    description: "Clarify the brand, audience, offer, and what the site needs to do."
+  },
+  {
+    index: "02",
+    title: "Design",
+    description: "Shape the visual system, messaging hierarchy, and interaction language."
+  },
+  {
+    index: "03",
+    title: "Build",
+    description: "Develop the experience with responsive precision and premium motion."
+  },
+  {
+    index: "04",
+    title: "Launch",
+    description: "Deploy cleanly, test the experience, and prepare the site for live traffic."
+  },
+  {
+    index: "05",
+    title: "Maintain",
+    description: "Keep the site current through updates, support, and ongoing refinement."
+  }
+];
+
+export const differentiators = [
+  "Custom builds instead of recycled templates",
+  "Premium visual direction with technical precision",
+  "One studio handling both launch and long-term upkeep",
+  "Modern frontend execution with tasteful animation",
+  "Clear process, clear scope, and a clean service model"
+];
+
+export const portfolioProjects: ProjectItem[] = [
+  {
+    name: "Northline Studio",
+    category: "Architecture",
+    goal: "A refined studio website designed to present private residential work with editorial clarity.",
+    tags: ["Editorial", "Minimal", "High Contrast"],
+    accent: "linear-gradient(135deg, rgba(234,124,37,0.85), rgba(18,18,20,0.25))"
+  },
+  {
+    name: "Ember & Oak",
+    category: "Hospitality",
+    goal: "A premium hospitality brand presence with warm tone, intuitive navigation, and motion-led detail.",
+    tags: ["Warm", "Luxury", "Story-led"],
+    accent: "linear-gradient(135deg, rgba(245,231,215,0.9), rgba(234,124,37,0.8))"
+  },
+  {
+    name: "Atlas Private",
+    category: "Advisory",
+    goal: "A strategic consulting site framed to feel confident, discreet, and sharply structured.",
+    tags: ["Corporate", "Structured", "Technical"],
+    accent: "linear-gradient(135deg, rgba(26,27,31,0.95), rgba(92,98,105,0.55))"
+  },
+  {
+    name: "Vale Fitness",
+    category: "Wellness",
+    goal: "A conversion-focused wellness brand site with energetic layout rhythm and a clear membership funnel.",
+    tags: ["Conversion", "Athletic", "Clean"],
+    accent: "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(234,124,37,0.75))"
+  },
+  {
+    name: "Meridian Group",
+    category: "Professional Services",
+    goal: "A modern services website that balances trust, clarity, and premium presentation.",
+    tags: ["Trust", "Professional", "Modern"],
+    accent: "linear-gradient(135deg, rgba(241,236,227,0.95), rgba(22,22,24,0.85))"
+  }
+];
+
+export const contactPlaceholders = {
+  email: "hello@banditmedia.co",
+  instagram: "@banditmedia",
+  note: "Replace placeholder contact details with the final business information before launch."
+};
