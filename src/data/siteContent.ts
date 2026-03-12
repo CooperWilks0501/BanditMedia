@@ -20,6 +20,9 @@ export type ProjectItem = {
   goal: string;
   tags: string[];
   accent: string;
+  image: string;
+  url: string;
+  summary: string;
 };
 
 export const navLinks = [
@@ -137,35 +140,20 @@ export const portfolioProjects: ProjectItem[] = [
     category: "Managing General Agency",
     goal: "A sharper digital presence for a managing general agency focused on transportation, built to communicate trust, underwriting clarity, and a more current brand presentation.",
     tags: ["Insurance", "Corporate", "Trust"],
-    accent: "linear-gradient(135deg, rgba(26,27,31,0.95), rgba(234,124,37,0.52))"
+    accent: "linear-gradient(135deg, rgba(26,27,31,0.95), rgba(234,124,37,0.52))",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.mhcmga.com?w=1600",
+    url: "https://www.mhcmga.com/",
+    summary: "A transportation-focused managing general agency website with a cleaner information hierarchy, clearer underwriting message, and a more credible visual presentation for agency partners."
   },
   {
     name: "Commodore Trucking Insurance",
     category: "Commercial Trucking Insurance",
     goal: "A modernized insurance website for a trucking-focused business, designed to feel more established, easier to navigate, and clearer about coverage direction.",
     tags: ["Trucking", "Insurance", "Lead Gen"],
-    accent: "linear-gradient(135deg, rgba(241,236,227,0.95), rgba(22,22,24,0.85))"
-  },
-  {
-    name: "Atlas Private",
-    category: "Advisory",
-    goal: "A strategic consulting site framed to feel confident, discreet, and sharply structured.",
-    tags: ["Corporate", "Structured", "Technical"],
-    accent: "linear-gradient(135deg, rgba(26,27,31,0.95), rgba(92,98,105,0.55))"
-  },
-  {
-    name: "Vale Fitness",
-    category: "Wellness",
-    goal: "A conversion-focused wellness brand site with energetic layout rhythm and a clear membership funnel.",
-    tags: ["Conversion", "Athletic", "Clean"],
-    accent: "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(234,124,37,0.75))"
-  },
-  {
-    name: "Meridian Group",
-    category: "Professional Services",
-    goal: "A modern services website that balances trust, clarity, and premium presentation.",
-    tags: ["Trust", "Professional", "Modern"],
-    accent: "linear-gradient(135deg, rgba(245,231,215,0.9), rgba(234,124,37,0.8))"
+    accent: "linear-gradient(135deg, rgba(241,236,227,0.95), rgba(22,22,24,0.85))",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcommodorerrg.com%2F?w=1600",
+    url: "https://commodorerrg.com/",
+    summary: "A commercial trucking insurance site built to present coverage more confidently, guide visitors more cleanly, and create a stronger first impression for prospective insureds."
   }
 ];
 

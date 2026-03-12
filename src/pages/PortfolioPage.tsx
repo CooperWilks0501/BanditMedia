@@ -9,12 +9,12 @@ export function PortfolioPage() {
     <>
       <PageHero
         eyebrow="Portfolio"
-        title="Selected work with room to keep growing."
-        description="Bandit Media presents live client work alongside future-ready case study slots, so the portfolio already feels structured while remaining easy to expand."
+        title="Live work with a cleaner, more credible web presence."
+        description="A focused portfolio of real client projects built to improve clarity, presentation, and trust at first glance."
         aside={
           <>
-            <span className="eyebrow">Portfolio System</span>
-            <p>Live projects can sit alongside placeholder studies in the same layout, making it straightforward to expand the portfolio without rebuilding the page structure.</p>
+            <span className="eyebrow">Selected Projects</span>
+            <p>Each project below reflects live work, with the top cards showing actual website screenshots and the lower section outlining the business context more clearly.</p>
           </>
         }
       />
@@ -23,12 +23,13 @@ export function PortfolioPage() {
         <div className="container portfolio-grid">
           {portfolioProjects.map((project) => (
             <Reveal key={project.name} className="portfolio-card panel">
-              <div className="portfolio-card__visual" style={{ background: project.accent }}>
+              <a href={project.url} target="_blank" rel="noreferrer" className="portfolio-card__visual">
+                <img src={project.image} alt={`${project.name} website preview`} loading="lazy" />
                 <div className="portfolio-card__overlay">
                   <span>{project.category}</span>
                   <ArrowUpRight size={18} />
                 </div>
-              </div>
+              </a>
               <div className="portfolio-card__body">
                 <h2>{project.name}</h2>
                 <p>{project.goal}</p>
@@ -45,11 +46,11 @@ export function PortfolioPage() {
 
       <section className="section section--contrast">
         <div className="container split-panel">
-          {portfolioProjects.slice(0, 3).map((project, index) => (
+          {portfolioProjects.map((project, index) => (
             <Reveal key={project.name} className="panel case-preview">
-              <span className="eyebrow">Case Study / 0{index + 1}</span>
+              <span className="eyebrow">Project / 0{index + 1}</span>
               <h3>{project.name}</h3>
-              <p>{project.goal}</p>
+              <p>{project.summary}</p>
               <div className="tag-row">
                 <span>{project.category}</span>
                 {project.tags.map((tag) => (
