@@ -1,12 +1,21 @@
-import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useReducedMotion,
+  useSpring
+} from "framer-motion";
 import type { MouseEvent } from "react";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Button } from "../common/Button";
 import { heroMetrics } from "../../data/siteContent";
 
-const panelRows = Array.from({ length: 8 }, (_, index) => index);
+const panelRows = Array.from({ length: 5 }, (_, index) => index);
 
 export function HomeHero() {
+  const shouldReduceMotion = useReducedMotion();
+  const [interactive, setInteractive] = useState(false);
+  const frameRef = useRef<number | null>(null);
   const x = useMotionValue(50);
   const y = useMotionValue(50);
   const rotateX = useSpring(0, { stiffness: 80, damping: 18 });
@@ -22,18 +31,52 @@ export function HomeHero() {
     []
   );
 
+  useEffect(() => {
+    if (shouldReduceMotion) {
+      setInteractive(false);
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(pointer: fine) and (min-width: 1024px)");
+    const updateInteractive = () => setInteractive(mediaQuery.matches);
+
+    updateInteractive();
+    mediaQuery.addEventListener("change", updateInteractive);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateInteractive);
+      if (frameRef.current) {
+        cancelAnimationFrame(frameRef.current);
+      }
+    };
+  }, [shouldReduceMotion]);
+
   const handlePointerMove = (event: MouseEvent<HTMLElement>) => {
+    if (!interactive) {
+      return;
+    }
+
     const rect = event.currentTarget.getBoundingClientRect();
     const px = ((event.clientX - rect.left) / rect.width) * 100;
     const py = ((event.clientY - rect.top) / rect.height) * 100;
 
-    x.set(px);
-    y.set(py);
-    rotateX.set((50 - py) / 9);
-    rotateY.set((px - 50) / 10);
+    if (frameRef.current) {
+      cancelAnimationFrame(frameRef.current);
+    }
+
+    frameRef.current = requestAnimationFrame(() => {
+      x.set(px);
+      y.set(py);
+      rotateX.set((50 - py) / 12);
+      rotateY.set((px - 50) / 14);
+    });
   };
 
   const resetPointer = () => {
+    if (!interactive) {
+      return;
+    }
+
     rotateX.set(0);
     rotateY.set(0);
     x.set(50);
@@ -103,9 +146,9 @@ export function HomeHero() {
 
         <motion.div
           className="hero-visual"
-          onMouseMove={handlePointerMove}
-          onMouseLeave={resetPointer}
-          style={{ background, transform }}
+          onMouseMove={interactive ? handlePointerMove : undefined}
+          onMouseLeave={interactive ? resetPointer : undefined}
+          style={{ background, transform: interactive ? transform : "none" }}
         >
           <div className="hero-visual__grid" />
           <div className="hero-visual__scan" />
@@ -130,8 +173,16 @@ export function HomeHero() {
               <motion.div
                 key={row}
                 className="hero-visual__bar"
-                animate={{ x: row % 2 === 0 ? [0, 16, 0] : [0, -12, 0] }}
-                transition={{ duration: 7 + row, repeat: Infinity, ease: "easeInOut" }}
+                animate={
+                  interactive && !shouldReduceMotion
+                    ? { x: row % 2 === 0 ? [0, 8, 0] : [0, -6, 0] }
+                    : { x: 0 }
+                }
+                transition={
+                  interactive && !shouldReduceMotion
+                    ? { duration: 10 + row, repeat: Infinity, ease: "easeInOut" }
+                    : { duration: 0 }
+                }
               />
             ))}
           </div>

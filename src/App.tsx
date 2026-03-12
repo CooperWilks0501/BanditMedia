@@ -19,8 +19,20 @@ function ScrollToTop() {
 
 export default function App() {
   useEffect(() => {
+    const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const finePointerQuery = window.matchMedia("(pointer: fine)");
+    const largeScreenQuery = window.matchMedia("(min-width: 1024px)");
+
+    if (
+      reduceMotionQuery.matches ||
+      !finePointerQuery.matches ||
+      !largeScreenQuery.matches
+    ) {
+      return;
+    }
+
     const lenis = new Lenis({
-      duration: 1.1,
+      duration: 0.85,
       smoothWheel: true,
       gestureOrientation: "vertical"
     });
