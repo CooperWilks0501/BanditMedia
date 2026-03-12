@@ -142,7 +142,7 @@ export const portfolioProjects: ProjectItem[] = [
     tags: ["Insurance", "Corporate", "Trust"],
     accent: "linear-gradient(135deg, rgba(26,27,31,0.95), rgba(234,124,37,0.52))",
     image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.mhcmga.com?w=1600",
-    url: "https://www.mhcmga.com/",
+    url: "https://github.com/MHCMGA/MHCUpdatedWebApllication/settings/pages",
     summary: "A transportation-focused managing general agency website with a cleaner information hierarchy, clearer underwriting message, and a more credible visual presentation for agency partners."
   },
   {
@@ -162,3 +162,4 @@ export const contactPlaceholders = {
   instagram: "@banditmedia",
   note: "Replace placeholder contact details with the final business information before launch."
 };
+
