@@ -1,4 +1,4 @@
-import { Brush, Code2, Rocket, ShieldCheck, Gauge, PenSquare } from "lucide-react";
+﻿import { Brush, Code2, Rocket, ShieldCheck, Gauge, PenSquare } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export type ServiceItem = {
@@ -133,18 +133,18 @@ export const differentiators = [
 
 export const portfolioProjects: ProjectItem[] = [
   {
-    name: "Northline Studio",
-    category: "Architecture",
-    goal: "A refined studio website designed to present private residential work with editorial clarity.",
-    tags: ["Editorial", "Minimal", "High Contrast"],
-    accent: "linear-gradient(135deg, rgba(234,124,37,0.85), rgba(18,18,20,0.25))"
+    name: "MHC MGA",
+    category: "Managing General Agency",
+    goal: "A sharper digital presence for a managing general agency focused on transportation, built to communicate trust, underwriting clarity, and a more current brand presentation.",
+    tags: ["Insurance", "Corporate", "Trust"],
+    accent: "linear-gradient(135deg, rgba(26,27,31,0.95), rgba(234,124,37,0.52))"
   },
   {
-    name: "Ember & Oak",
-    category: "Hospitality",
-    goal: "A premium hospitality brand presence with warm tone, intuitive navigation, and motion-led detail.",
-    tags: ["Warm", "Luxury", "Story-led"],
-    accent: "linear-gradient(135deg, rgba(245,231,215,0.9), rgba(234,124,37,0.8))"
+    name: "Commodore Trucking Insurance",
+    category: "Commercial Trucking Insurance",
+    goal: "A modernized insurance website for a trucking-focused business, designed to feel more established, easier to navigate, and clearer about coverage direction.",
+    tags: ["Trucking", "Insurance", "Lead Gen"],
+    accent: "linear-gradient(135deg, rgba(241,236,227,0.95), rgba(22,22,24,0.85))"
   },
   {
     name: "Atlas Private",
@@ -165,7 +165,7 @@ export const portfolioProjects: ProjectItem[] = [
     category: "Professional Services",
     goal: "A modern services website that balances trust, clarity, and premium presentation.",
     tags: ["Trust", "Professional", "Modern"],
-    accent: "linear-gradient(135deg, rgba(241,236,227,0.95), rgba(22,22,24,0.85))"
+    accent: "linear-gradient(135deg, rgba(245,231,215,0.9), rgba(234,124,37,0.8))"
   }
 ];
 

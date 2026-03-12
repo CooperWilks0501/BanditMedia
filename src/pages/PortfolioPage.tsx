@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+﻿import { ArrowUpRight } from "lucide-react";
 import { Button } from "../components/common/Button";
 import { Reveal } from "../components/common/Reveal";
 import { PageHero } from "../components/sections/PageHero";
@@ -9,12 +9,12 @@ export function PortfolioPage() {
     <>
       <PageHero
         eyebrow="Portfolio"
-        title="Selected work, structured for future case studies."
-        description="The portfolio is ready for real projects later, but already framed to present work with clarity, restraint, and strong visual hierarchy."
+        title="Selected work with room to keep growing."
+        description="Bandit Media presents live client work alongside future-ready case study slots, so the portfolio already feels structured while remaining easy to expand."
         aside={
           <>
-            <span className="eyebrow">Future Ready</span>
-            <p>Project content is driven from editable data, making it straightforward to swap placeholders for real case studies.</p>
+            <span className="eyebrow">Portfolio System</span>
+            <p>Live projects can sit alongside placeholder studies in the same layout, making it straightforward to expand the portfolio without rebuilding the page structure.</p>
           </>
         }
       />
@@ -65,7 +65,7 @@ export function PortfolioPage() {
         <div className="container final-cta__inner panel">
           <div>
             <span className="eyebrow">Have A Project?</span>
-            <h2>Let�s make your brand look more established online.</h2>
+            <h2>Let’s make your brand look more established online.</h2>
             <p>Bandit Media builds premium digital experiences that are easier to trust at first glance.</p>
           </div>
           <Button to="/quote">Start a Project</Button>
