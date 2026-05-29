@@ -142,7 +142,7 @@ export const portfolioProjects: ProjectItem[] = [
     tags: ["Insurance", "Corporate", "Trust"],
     accent: "linear-gradient(135deg, rgba(26,27,31,0.95), rgba(234,124,37,0.52))",
     image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.mhcmga.com?w=1600",
-    url: "https://github.com/MHCMGA/MHCUpdatedWebApllication/settings/pages",
+    url: "https://mhcmga.com",
     summary: "A transportation-focused managing general agency website with a cleaner information hierarchy, clearer underwriting message, and a more credible visual presentation for agency partners."
   },
   {
@@ -154,6 +154,26 @@ export const portfolioProjects: ProjectItem[] = [
     image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcommodorerrg.com%2F?w=1600",
     url: "https://commodorerrg.com/",
     summary: "A commercial trucking insurance site built to present coverage more confidently, guide visitors more cleanly, and create a stronger first impression for prospective insureds."
+  },
+  {
+    name: "Jack Finn Craftsman",
+    category: "Home Renovation & Fine Finish",
+    goal: "A craftsman-forward portfolio site for a home renovation and fine finish carpentry business, designed to present the work with the same care and precision as the millwork itself.",
+    tags: ["Renovation", "Craftsmanship", "Residential"],
+    accent: "linear-gradient(135deg, rgba(58,42,28,0.95), rgba(184,134,76,0.55))",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fcooperwilks0501.github.io%2FJackFinnCraftsman%2F?w=1600",
+    url: "https://cooperwilks0501.github.io/JackFinnCraftsman/",
+    summary: "A residential renovation and fine finish carpentry site built around clear project showcases, a calm visual tone, and a confident craftsman presentation that lets the work speak for itself."
+  },
+  {
+    name: "Palmetto Consulting",
+    category: "Business Consulting",
+    goal: "A polished consulting website for a Columbia-based advisory firm, designed to communicate seasoned expertise, local credibility, and a confident presentation for prospective clients.",
+    tags: ["Consulting", "Professional Services", "Local Business"],
+    accent: "linear-gradient(135deg, rgba(20,40,72,0.95), rgba(212,184,150,0.55))",
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpalmettoconsulting.us%2F?w=1600",
+    url: "https://palmettoconsulting.us/",
+    summary: "A Columbia-based business consulting site built to project measured authority, clarify the firm's service direction, and create a polished first impression for decision-makers evaluating advisory partners."
   }
 ];
 
