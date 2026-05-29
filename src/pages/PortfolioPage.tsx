@@ -45,7 +45,7 @@ export function PortfolioPage() {
       </section>
 
       <section className="section section--contrast">
-        <div className="container split-panel">
+        <div className="container case-grid">
           {portfolioProjects.map((project, index) => (
             <Reveal key={project.name} className="panel case-preview">
               <span className="eyebrow">Project / 0{index + 1}</span>

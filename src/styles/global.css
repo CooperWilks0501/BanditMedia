@@ -623,6 +623,12 @@ main {
   gap: 1rem;
 }
 
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
 .project-card,
 .portfolio-card {
   display: flex;
@@ -892,6 +898,7 @@ main {
   .why-grid,
   .pricing-teaser,
   .split-panel,
+  .case-grid,
   .contact-layout {
     grid-template-columns: 1fr;
   }
