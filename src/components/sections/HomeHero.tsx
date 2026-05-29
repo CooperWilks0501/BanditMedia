@@ -153,7 +153,7 @@ export function HomeHero() {
           <div className="hero-visual__grid" />
           <div className="hero-visual__scan" />
           <div className="hero-visual__panel hero-visual__panel--primary">
-            <span className="hero-visual__code">BM // SYSTEM 01</span>
+            <span className="hero-visual__code">WM // SYSTEM 01</span>
             <strong>Premium web presence</strong>
             <p>Angular structure, modern motion, precise hierarchy.</p>
           </div>

@@ -1101,10 +1101,12 @@ main {
     grid-template-columns: 1fr;
   }
 
-  /* Hero visual was eating ~500px (most of a phone viewport) before the user
-     even sees the headline. Drop it to a sensible mobile preview height. */
+  /* Hero visual on mobile: the decorative absolutely-positioned panels +
+     labels + stripes overlap each other in a 360px box and look chaotic.
+     The block is pure decoration, the hero copy carries the message, so
+     hide it on phones entirely. Desktop layout is untouched. */
   .hero-visual {
-    min-height: 360px;
+    display: none;
   }
 
   .hero-visual__scan,
