@@ -23,8 +23,11 @@ export function Navbar() {
     <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__inner">
         <NavLink to="/" className="brandmark" aria-label="WilksMedia home">
-          <span className="brandmark__code">WM / 01</span>
-          <span className="brandmark__name">WilksMedia</span>
+          <img src="/WilksMediaLogo.png" alt="" className="brandmark__logo" />
+          <div className="brandmark__text">
+            <span className="brandmark__code">WM / 01</span>
+            <span className="brandmark__name">WilksMedia</span>
+          </div>
         </NavLink>
 
         <nav className="navbar__links" aria-label="Primary">
