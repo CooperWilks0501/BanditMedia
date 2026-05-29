@@ -117,15 +117,23 @@ export function HomePage() {
           <div className="project-grid">
             {portfolioProjects.slice(0, 3).map((project) => (
               <Reveal key={project.name} className="project-card panel">
-                <div className="project-card__visual" style={{ background: project.accent }} />
-                <div className="project-card__meta">
-                  <span className="eyebrow">{project.category}</span>
-                  <div className="project-card__header">
-                    <h3>{project.name}</h3>
-                    <ArrowUpRight size={16} />
+                <Link to="/portfolio" className="project-card__link">
+                  <div className="project-card__visual" style={{ background: project.accent }}>
+                    <img
+                      src={project.image}
+                      alt={`${project.name} preview`}
+                      loading="lazy"
+                    />
                   </div>
-                  <p>{project.goal}</p>
-                </div>
+                  <div className="project-card__meta">
+                    <span className="eyebrow">{project.category}</span>
+                    <div className="project-card__header">
+                      <h3>{project.name}</h3>
+                      <ArrowUpRight size={16} />
+                    </div>
+                    <p>{project.goal}</p>
+                  </div>
+                </Link>
               </Reveal>
             ))}
           </div>
