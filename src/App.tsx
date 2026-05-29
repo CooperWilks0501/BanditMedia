@@ -5,6 +5,7 @@ import { Layout } from "./components/layout/Layout";
 import { HomePage } from "./pages/HomePage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { PortfolioPage } from "./pages/PortfolioPage";
+import { AboutPage } from "./pages/AboutPage";
 import { QuotePage } from "./pages/QuotePage";
 
 function ScrollToTop() {
@@ -57,6 +58,7 @@ export default function App() {
         <Route path="/" element={<Layout><HomePage /></Layout>} />
         <Route path="/services" element={<Layout><ServicesPage /></Layout>} />
         <Route path="/portfolio" element={<Layout><PortfolioPage /></Layout>} />
+        <Route path="/about" element={<Layout><AboutPage /></Layout>} />
         <Route path="/quote" element={<Layout><QuotePage /></Layout>} />
       </Routes>
     </>
