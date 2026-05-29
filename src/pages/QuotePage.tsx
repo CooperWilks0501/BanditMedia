@@ -153,10 +153,10 @@ export function QuotePage() {
                     <option value="" disabled>
                       Select a range
                     </option>
-                    <option>Under $5k</option>
-                    <option>$5k - $10k</option>
-                    <option>$10k - $20k</option>
-                    <option>$20k+</option>
+                    <option>$100 - $500</option>
+                    <option>$500 - $1,000</option>
+                    <option>$1,000 - $2,000</option>
+                    <option>$2,000+</option>
                   </select>
                 </label>
                 <label>
