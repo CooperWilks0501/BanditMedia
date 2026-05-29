@@ -33,11 +33,20 @@ export default {
       return jsonResponse({ ok: true });
     }
 
-    const { name, email, company, projectType, budget, message } = body;
+    const {
+      name,
+      email,
+      company,
+      websiteUrl,
+      projectType,
+      budget,
+      timeline,
+      message,
+    } = body;
 
     if (!name || !email || !message) {
       return jsonResponse(
-        { error: "Name, email, and message are required." },
+        { error: "Name, email, and project details are required." },
         400,
       );
     }
@@ -57,7 +66,16 @@ export default {
         to: [TO_ADDRESS],
         reply_to: email,
         subject: `New quote request from ${name}`,
-        text: buildEmailBody({ name, email, company, projectType, budget, message }),
+        text: buildEmailBody({
+          name,
+          email,
+          company,
+          websiteUrl,
+          projectType,
+          budget,
+          timeline,
+          message,
+        }),
       }),
     });
 
@@ -93,17 +111,28 @@ function isValidEmail(s) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
 }
 
-function buildEmailBody({ name, email, company, projectType, budget, message }) {
+function buildEmailBody({
+  name,
+  email,
+  company,
+  websiteUrl,
+  projectType,
+  budget,
+  timeline,
+  message,
+}) {
   return [
     "New quote request from wilksmedia.com:",
     "",
     `Name: ${name}`,
     `Email: ${email}`,
-    company ? `Company: ${company}` : null,
-    projectType ? `Project type: ${projectType}` : null,
+    company ? `Business / Brand: ${company}` : null,
+    websiteUrl ? `Website / URL: ${websiteUrl}` : null,
+    projectType ? `Service needed: ${projectType}` : null,
     budget ? `Budget: ${budget}` : null,
+    timeline ? `Timeline: ${timeline}` : null,
     "",
-    "Message:",
+    "Project details:",
     message,
     "",
     "---",
